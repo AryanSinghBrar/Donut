@@ -3,6 +3,9 @@
 #include <windows.h>
 #define π 3.14159265358979323846
 
+// TODO: different ascii characters?
+// TODO: differentiate shape? Maybe a pyramid or C shape or something.
+
 // SOURCE: https://www.a1k0n.net/2011/07/20/donut-math.html
 // Morning, this is what I figured out so far:
 // Basically we calculate the xyz values of 1 point at a time
@@ -111,7 +114,17 @@ void render_frame(float A, float B){
   }
 }
 
+// This function disables the cursor in the terminal
+void hideCursor() {
+    HANDLE consoleHandle = GetStdHandle(STD_OUTPUT_HANDLE);
+    CONSOLE_CURSOR_INFO cursorInfo;
+    GetConsoleCursorInfo(consoleHandle, &cursorInfo);
+    cursorInfo.bVisible = FALSE;  // Set the cursor visibility to false
+    SetConsoleCursorInfo(consoleHandle, &cursorInfo);
+}
+
 int main() {
+  hideCursor(); // Though the cursor spassing on the screen is cool (reminds me of film grain), I remove it for presentation sake
 
   float A = 0, B = 0;
   
