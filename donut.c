@@ -67,6 +67,7 @@ void render_frame(float A, float B){
     float sintheta = sin(theta);
 
     // Creating the solid of revolution, counterclockwise --> O
+    // You can make a "C" shape by changing the limits of phi to something like π/4 to 11π/6
     for (float phi = 0; phi < 2*π; phi += phi_spacing)
     {
       /// Pre-calculate subexpressions
