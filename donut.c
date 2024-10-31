@@ -38,7 +38,7 @@ void render_frame(float A, float B){
   float sina = sin(A);
   float sinb = sin(B);
 
-  // Buffers
+  // Instantiate buffer arrays in heap
   char output[35][35];
   float zbuffer[35][35];
 
