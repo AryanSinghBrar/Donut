@@ -136,7 +136,7 @@ int main() {
     A += 0.04;
     B += 0.02;
 
-    Sleep(30); // sleeper to aid in animation
+    Sleep(30); // sleeper to aid in animation (last set at 30)
   }
   
   return 0;
